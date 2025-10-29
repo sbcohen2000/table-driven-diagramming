@@ -1,0 +1,27 @@
+cabal-version:      3.0
+name:               ccs-tiny
+version:            0.1.0.0
+license:            MIT
+license-file:       LICENSE
+author:             Sam Cohen
+maintainer:         samcohen@uchicago.edu
+category:           Language
+build-type:         Simple
+extra-doc-files:    CHANGELOG.md
+
+common warnings
+    ghc-options: -Wall
+
+executable ccs-tiny
+    import:           warnings
+    main-is:          Main.hs
+    other-modules:    Pretty
+    build-depends:    base
+                    , containers
+                    , megaparsec
+                    , mtl
+                    , optparse-applicative
+                    , parser-combinators
+                    , text
+    hs-source-dirs:   .
+    default-language: GHC2021
